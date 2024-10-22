@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Bookshelf App</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Tambah Buku Baru</h2>
+        <form id="bookForm" data-testid="bookForm">
+          <div>
+            <label for="bookFormTitle">Judul</label>
+            <input
+              id="bookFormTitle"
+              type="text"
+              required
+              data-testid="bookFormTitleInput"
+            />
+          </div>
+          <div>
+            <label for="bookFormAuthor">Penulis</label>
+            <input
+              id="bookFormAuthor"
+              type="text"
+              required
+              data-testid="bookFormAuthorInput"
+            />
+          </div>
+          <div>
+            <label for="bookFormYear">Tahun</label>
+            <input
+              id="bookFormYear"
+              type="number"
+              required
+              data-testid="bookFormYearInput"
+            />
+          </div>
+          <div>
+            <label for="bookFormImage">Gambar Sampul Buku</label>
+            <input
+              id="bookFormImage"
+              type="file"
+              accept="image/*"
+              data-testid="bookFormImageInput"
+            />
+          </div>
+          <div>
+            <label for="bookFormIsComplete"
+              ><input
+                id="bookFormIsComplete"
+                type="checkbox"
+                data-testid="bookFormIsCompleteCheckbox"
+              />
+              Selesai dibaca</label
+            >
+          </div>
+          <button
+            id="bookFormSubmit"
+            type="submit"
+            data-testid="bookFormSubmitButton"
+          >
+            Masukkan Buku ke rak
+          </button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Edit Buku</h2>
+        <form id="editBookForm" style="display: none">
+          <div>
+            <label for="editBookTitle">Judul</label>
+            <input id="editBookTitle" type="text" required />
+          </div>
+          <div>
+            <label for="editBookAuthor">Penulis</label>
+            <input id="editBookAuthor" type="text" required />
+          </div>
+          <div>
+            <label for="editBookYear">Tahun</label>
+            <input id="editBookYear" type="number" required />
+          </div>
+          <div>
+            <label for="editBookImage">Gambar Sampul Buku</label>
+            <input id="editBookImage" type="file" accept="image/*" />
+          </div>
+          <div>
+            <input id="editBookIsComplete" type="checkbox" />
+            <label for="editBookIsComplete">Selesai dibaca</label>
+          </div>
+          <button type="submit">Update Buku</button>
+          <button type="button" id="cancelEditButton">Batal</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Cari Buku</h2>
+        <form id="searchBookForm" data-testid="searchBookForm">
+          <div>
+            <label for="searchBookTitle">Judul</label>
+            <input
+              id="searchBookTitle"
+              type="text"
+              required
+              data-testid="searchBookFormTitleInput"
+            />
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookList" data-testid="incompleteBookList"></div>
+      </section>
+
+      <section>
+        <h2>Selesai dibaca</h2>
+        <div id="completeBookList" data-testid="completeBookList"></div>
+      </section>
+
+      <footer>
+        <p>Muhammad Bintang Nugraha</p>
+      </footer>
+    </main>
+  </body>
+</html>

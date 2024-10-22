@@ -1,0 +1,266 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Start Global CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p,
+h3,
+img {
+  margin-bottom: 10px;
+}
+
+body,
+input,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #e5e5f7;
+  opacity: 0.9;
+  background-image: radial-gradient(#0000ff 0.5px, #d6d6d7 0.5px);
+  background-size: 10px 10px;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+header {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+main {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* End Global CSS */
+
+/* Start Form Styles */
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid rgba(68, 76, 247, 0.6);
+  border-radius: 8px;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: rgba(68, 76, 247, 0.8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgba(68, 76, 247, 1);
+}
+
+/* End Form Styles */
+
+/* Start Book List Styles */
+h2 {
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#incompleteBookList,
+#completeBookList {
+  display: flex;
+  flex-direction: column;
+}
+
+[data-testid="bookItem"] {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-testid="bookItem"] img {
+  max-width: 100px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+[data-testid="bookItem"] button {
+  margin-right: 10px;
+}
+
+footer {
+  background-color: #444cf7;
+  text-align: center;
+  padding: 20px;
+  border-top: 1.5px solid rgba(68, 76, 247, 0.6);
+}
+
+footer p {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* End Book List Styles */
+
+/* Responsive Styles */
+@media only screen and (max-width: 960px) {
+  main {
+    padding: 10px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  button {
+    padding: 8px 12px;
+  }
+
+  /* Mengubah ukuran font pada resolusi lebih kecil */
+  h2 {
+    font-size: 24px;
+  }
+
+  p,
+  label,
+  input,
+  button {
+    font-size: 14px;
+  }
+
+  header {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  [data-testid="bookItem"] {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  [data-testid="bookItem"] img {
+    max-width: 80px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+}
+
+/* Media query untuk resolusi tablet */
+@media only screen and (max-width: 768px) {
+  form {
+    padding: 12px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p,
+  label {
+    font-size: 12px;
+  }
+
+  button {
+    padding: 6px 10px;
+  }
+
+  [data-testid="bookItem"] img {
+    max-width: 90px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+}
+
+/* Media query untuk resolusi ponsel */
+@media only screen and (max-width: 480px) {
+  form {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p,
+  label {
+    font-size: 12px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="file"] {
+    padding: 8px;
+  }
+
+  [data-testid="bookItem"] button {
+    margin-right: 0px;
+  }
+
+  button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  [data-testid="bookItem"] {
+    padding: 10px;
+    margin: 8px 0;
+  }
+
+  [data-testid="bookItem"] img {
+    max-width: 60px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
