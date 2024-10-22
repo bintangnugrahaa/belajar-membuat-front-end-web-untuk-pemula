@@ -1,3 +1,5 @@
+![Submission: Membangun Bookshelf App](https://i.ibb.co/5Yh8TPK/Screenshot-2024-10-22-230514.png)
+
 # Bookshelf App Starter Project
 
 Ini adalah starter project untuk siswa yang sedang mengerjakan tugas akhir kelas Belajar Membuat Front-End Web untuk Pemula.
